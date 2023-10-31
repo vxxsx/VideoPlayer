@@ -1,6 +1,5 @@
 package com.example.videoplayer;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -8,6 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class HttpUtils {
+
     public static String getJsonContent(String path){
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try {
@@ -17,7 +17,7 @@ public class HttpUtils {
             InputStream is = conn.getInputStream();
             byte[]buf = new byte[1024];
             int hasRead = 0;
-            while((hasRead = is.read(buf))!=-1){
+            while ((hasRead = is.read(buf))!=-1){
                 baos.write(buf,0,hasRead);
             }
         } catch (Exception e) {

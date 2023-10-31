@@ -66,24 +66,22 @@ public class VideoAdapter extends BaseAdapter{
 //      设置视频播放器的信息
         holder.jzvdStd.setUp(dataBean.getPlayUrl(),dataBean.getTitle(),JzvdStd.SCREEN_NORMAL);
         String thumbUrl = dataBean.getCover().getFeed();  //缩略图的网络地址
-        Picasso.with(context).load(thumbUrl).into(holder.jzvdStd.thumbImageView);
+        Picasso.with(context).load(thumbUrl).into(holder.jzvdStd.posterImageView);
         holder.jzvdStd.positionInList = position;
         return convertView;
     }
 
     class ViewHolder{
-        JzvdStd jzvdStd;//播放
+        JzvdStd jzvdStd;
         ImageView iconIv;
         TextView nameTv,descTv,heartTv,replyTv;
-        pubilc ViewHolder(View view){
+        public ViewHolder(View view){
             jzvdStd = view.findViewById(R.id.item_main_jzvd);
             iconIv = view.findViewById(R.id.item_main_iv);
             nameTv = view.findViewById(R.id.item_main_tv_name);
             descTv = view.findViewById(R.id.item_main_tv_des);
             heartTv = view.findViewById(R.id.item_main_iv_heart);
-            replyTv= view.findViewById(R.id.item_main_iv_reply);
+            replyTv = view.findViewById(R.id.item_main_iv_reply);
         }
     }
 }
-
-
