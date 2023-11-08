@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:configChanges="orientation|screenSize|keyboardHidden"
         android:screenOrientation="portrait"
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory"
