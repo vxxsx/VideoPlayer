@@ -13,8 +13,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import cn.jzvd.JZUtils;
-import cn.jzvd.Jzvd;
 import cn.jzvd.JzvdStd;
 
 public class VideoAdapter extends BaseAdapter{
